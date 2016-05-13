@@ -1,0 +1,100 @@
+.container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+    background: url("../img/ifeiwutut60-21.png") no-repeat center;
+    background-color: #89ABE3;
+}
+.menu-box{
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 768px;
+    height: 240px;
+    background-color: rgba(25,25,25,.2);
+}
+.menu-box a{
+    display: inline-block;
+    line-height: 1em;
+    margin: 0 5px;
+    padding-left: 20px;
+    word-spacing: 1.5em;
+    letter-spacing: .8em;
+    font-size: 2.6em;
+    font-family: Stalemate,cursive,sans-serif;
+    -webkit-animation: cateshow .9s linear;
+    animation: cateshow .9s linear;
+}
+@media screen and (max-width: 640px) {
+    .menu-box{
+        -ms-flex-flow: column;
+        flex-flow: column;
+        -webkit-flex-flow: column;
+    }
+    .menu-box a {
+        margin: 5px 0;
+    }
+}
+@keyframes cateshow {
+    0% {
+        top: -50px;
+        opacity: 0;
+    }
+
+    33% {
+        top: -30px;
+        opacity: .2;
+    }
+    66% {
+        top: -15px;
+        opacity: .6;
+    }
+    100% {
+        top: 0;
+        opacity: 1;
+    }
+}
+.line{
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    box-shadow: 0 0 1px transparent;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    position: relative;
+    overflow: hidden;
+}
+.line:before{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    background: #F2DDDE;
+    height: 1px;
+    transition-property: left,right;
+    transition-duration: .3s;
+    transition-timing-function: ease-out;
+}
+.line:hover:before{
+    left: 0;
+    right: 0;
+}
